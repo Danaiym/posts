@@ -14,7 +14,7 @@ class Post(models.Model):
     description = models.TextField()
     created_date=models.DateTimeField(auto_now_add=True)
     edit_date = models.DateTimeField(auto_now_add=True)
-    hashtag = models.ManyToManyField('Hashtag',related_name='hash_post')
+    hashtag = models.ManyToManyField('Hashtag', related_name='hash_post')
 
     def __str__(self):
         return f'{self.name}'
